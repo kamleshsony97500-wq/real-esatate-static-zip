@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UrbanNest - Static Real Estate Practice Website">
+  <title>UrbanNest | Find Your Dream Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#">Urban<span>Nest</span></a>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#properties">Properties</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <a class="header-btn" href="#contact">List Property</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">DUBAI • ABU DHABI • UAE</p>
+        <h1>Find a place<br>you'll <span>love.</span></h1>
+        <p class="hero-text">Discover hand-picked apartments, villas and luxury homes with a simple and modern property search.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#properties">Explore Properties</a>
+          <a class="btn light" href="#contact">Talk to an Agent</a>
+        </div>
+      </div>
+
+      <div class="search-card">
+        <div class="search-tabs">
+          <button class="tab active" data-type="all">Buy</button>
+          <button class="tab" data-type="rent">Rent</button>
+        </div>
+        <div class="search-grid">
+          <label>Location
+            <select id="locationFilter">
+              <option value="all">Any location</option>
+              <option value="Dubai Marina">Dubai Marina</option>
+              <option value="Downtown Dubai">Downtown Dubai</option>
+              <option value="Palm Jumeirah">Palm Jumeirah</option>
+              <option value="Jumeirah">Jumeirah</option>
+            </select>
+          </label>
+          <label>Property Type
+            <select id="typeFilter">
+              <option value="all">Any type</option>
+              <option value="Apartment">Apartment</option>
+              <option value="Villa">Villa</option>
+              <option value="Penthouse">Penthouse</option>
+            </select>
+          </label>
+          <label>Budget
+            <select id="priceFilter">
+              <option value="all">Any budget</option>
+              <option value="1">Under AED 2M</option>
+              <option value="2">AED 2M - 5M</option>
+              <option value="3">Above AED 5M</option>
+            </select>
+          </label>
+          <button class="search-btn" id="searchBtn">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="properties">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">FEATURED LISTINGS</p>
+          <h2>Homes worth <span>seeing.</span></h2>
+        </div>
+        <p id="resultCount" class="result-count">6 properties</p>
+      </div>
+
+      <div class="property-grid" id="propertyGrid"></div>
+      <p id="noResults" class="no-results hidden">No properties match your filters. Try another search.</p>
+    </section>
+
+    <section class="stats">
+      <div><strong>850+</strong><span>Properties listed</span></div>
+      <div><strong>24/7</strong><span>Client support</span></div>
+      <div><strong>98%</strong><span>Happy clients</span></div>
+      <div><strong>12+</strong><span>Years experience</span></div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="section-head centered">
+        <div>
+          <p class="eyebrow">WHAT WE DO</p>
+          <h2>Everything property,<br><span>made simple.</span></h2>
+        </div>
+      </div>
+      <div class="service-grid">
+        <article class="service-card"><div class="icon">⌂</div><h3>Buy a Home</h3><p>Explore verified homes and get guidance from property specialists throughout your purchase.</p><a href="#properties">Explore →</a></article>
+        <article class="service-card"><div class="icon">◈</div><h3>Rent a Property</h3><p>Find comfortable apartments and villas with flexible options for your lifestyle.</p><a href="#properties">Find rentals →</a></article>
+        <article class="service-card"><div class="icon">↗</div><h3>Sell Your Property</h3><p>Market your property with professional presentation and reach qualified buyers.</p><a href="#contact">Get started →</a></article>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about-image"><div class="image-label">EST. 2014<br><strong>UrbanNest</strong></div></div>
+      <div class="about-copy">
+        <p class="eyebrow">ABOUT URBANNEST</p>
+        <h2>Real estate with a <span>human touch.</span></h2>
+        <p>We believe finding a home should feel exciting, not complicated. Our team combines local market knowledge, honest advice and modern technology to make every step easier.</p>
+        <div class="check-list">
+          <p>✓ Verified property listings</p>
+          <p>✓ Local market specialists</p>
+          <p>✓ Transparent communication</p>
+        </div>
+        <a class="btn primary" href="#contact">Meet Our Team</a>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div>
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>Let's find your<br><span>next address.</span></h2>
+        <p>Tell us what you're looking for and a property consultant will contact you.</p>
+      </div>
+      <form id="contactForm">
+        <input id="name" type="text" placeholder="Your name" required>
+        <input id="email" type="email" placeholder="Email address" required>
+        <input id="phone" type="tel" placeholder="Phone number">
+        <select id="interest">
+          <option>I'm interested in buying</option>
+          <option>I'm interested in renting</option>
+          <option>I want to sell a property</option>
+        </select>
+        <textarea id="message" rows="4" placeholder="Tell us about your requirements"></textarea>
+        <button class="btn primary" type="submit">Send Enquiry</button>
+        <p id="formMessage" class="form-message"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo">Urban<span>Nest</span></div>
+    <p>© 2026 UrbanNest. Static practice project.</p>
+    <div><a href="#home">Home</a><a href="#properties">Properties</a><a href="#contact">Contact</a></div>
+  </footer>
+
+  <div class="modal hidden" id="modal">
+    <div class="modal-box">
+      <button class="close" id="closeModal">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
